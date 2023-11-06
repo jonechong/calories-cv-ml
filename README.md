@@ -12,3 +12,7 @@ The idea is simple:
 Create an interface that combs the web for food images based on the paramaters passed in. For example, we could pass in "chicken rice" to this interface and the interface will comb the web and automatically download images of chicken rice.  
 
 That of course, leads us to question: how do we know that these images that we downloaded are indeed accurate representations? It is a valid concern. The plan, then, is to create another interface that allows us to easily dispose of images that inaccurately represents the queried food. This interface could also extend to create bounding boxes or other forms of label for easy data processing. 
+
+
+## How to use
+After cloning, run pip install -r requirements.txt on your enviroment.
