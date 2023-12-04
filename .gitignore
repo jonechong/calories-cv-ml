@@ -1,1 +1,5 @@
 data/
+*.pt
+*.pth
+*.ini
+*.google-cookie
