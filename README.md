@@ -18,15 +18,15 @@ The interface I created can be found at: https://github.com/jonechong/image-labe
 #### Data Labelling (done with image-labeller linked above)
 For the images to be useful in training a machine learning model, they need to be labeled accurately. This involves:
 
-*Verifying each image to ensure it accurately represents the queried food item.
-*Annotating images with relevant information such as food type, ingredients, and possibly estimated calorie content.
+* Verifying each image to ensure it accurately represents the queried food item.
+* Annotating images with relevant information such as food type, ingredients, and possibly estimated calorie content.
 
 #### Image Processing
 Once the images are downloaded, they need to be processed to ensure uniformity and quality. This includes:
 
-*Resizing images to a standard dimension for consistency.
-*Normalizing pixel values for better model performance.
-*Augmenting the training dataset with transformations (like rotations, flips, etc.) to increase its robustness.
+* Resizing images to a standard dimension for consistency.
+* Normalizing pixel values for better model performance.
+* Augmenting the training dataset with transformations (like rotations, flips, etc.) to increase its robustness.
 We do augmentation also because our dataset size is not huge (only ~200 per food category as per the time of this writing), so we want the model to have some variety so that it generalises well.
 
 ### Model Training
@@ -34,11 +34,11 @@ We do augmentation also because our dataset size is not huge (only ~200 per food
 Given the nature of the task (image classification), a convolutional neural network (CNN) is suitable. Specifically, we are using MobileNetV2 due to its efficiency in handling image data with a relatively lower computational cost.
 
 Training Process
-*Preprocessing: Images are preprocessed as per the dataset creation steps.
-*Splitting Data: The dataset is divided into training, validation, and test sets.
-*Model Architecture: Modifications are made to MobileNetV2 to suit our specific needs, such as adjusting the output layer to match the number of food categories.
-*Training: The model is trained using the training set, with validation performed at intervals to monitor performance and avoid overfitting.
-*Hyperparameter Tuning: Parameters such as learning rate, batch size, and number of epochs are adjusted to optimize performance.
+* Preprocessing: Images are preprocessed as per the dataset creation steps.
+* Splitting Data: The dataset is divided into training, validation, and test sets.
+* Model Architecture: Modifications are made to MobileNetV2 to suit our specific needs, such as adjusting the output layer to match the number of food categories.
+* Training: The model is trained using the training set, with validation performed at intervals to monitor performance and avoid overfitting.
+* Hyperparameter Tuning: Parameters such as learning rate, batch size, and number of epochs are adjusted to optimize performance.
 
 #### Evaluation
 The model's performance is evaluated using the test set. Metrics such as accuracy are considered to assess the model's ability to classify images correctly.
